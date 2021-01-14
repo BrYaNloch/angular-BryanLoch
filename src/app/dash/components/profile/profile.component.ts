@@ -5,6 +5,7 @@ import {AuthService} from '../../../core/services/auth.service';
 import {Observable} from 'rxjs';
 import {TagInterface} from '../../../core/interfaces/tag.interface';
 import {TagService} from '../../../core/services/tag.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-profile',
