@@ -19,8 +19,14 @@ export class AppComponent {
   signout() {
     // supprimer les données de sessions et retourner à la page de login
     this.router.navigate(["/auth/signin"]).then(() => {
+      let snackBarRef = snackBar.open('You have signed out!');
       this.sessionService.clear();
       AuthService.user = null;
+    });
+  }
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
     });
   }
 }
